@@ -1,36 +1,45 @@
 body{
-  margin : o;
+  margin : 0;
   padding:0;
   background-color: skyblue;
-}
-
-.container{
-  max-width: 800px;
-  margin: 0 auto;
-  box-shadow: 0px 0px 3px rgba(0,0,0,3);
-}
-
-img{
-  width: 100%;
-  margin:0;
-  vertical-align: top;
+  
 }
 
 header{
-  background-color: skyblue;
   color:#fff;
   width: 100%;
   position: fixed;
   top:0;
-  z-index: 100;
+  z-index: 10;
 }
 
 header h1{
   margin-top: 0;
-  font-size: 25px;
-  padding: 5px;
+  font-size: 24px;
+  padding-top: 10px;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
 }
 
+div#img_unit{
+  width:100vw;
+  height:100vh;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 0px 0px 3px rgba(0,0,0,3);
+  overflow: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.collage{
+  scroll-snap-align: start;
+  height:100vh;
+}
+
+
+img{
+  height:100vh;
+  margin:0;
+  vertical-align: top;
+}
 

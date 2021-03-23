@@ -13,14 +13,16 @@
     <h1>#blue</h1>
   </header>
 
-  <div class = "container">
-    <div id = "img_unit">
-    </div>
-  </div>
+  
+      <div id = "img_unit">
+      </div>
+  
 
-  <script src="jquery.min.js"></script>
+  <!-- <script src="jquery.min.js"></script> -->
   <script>
-    $.getJSON('https://rys510.github.io/collage/images.php',function(data){
+    // jQuery
+    /*
+    $.getJSON('https://h2o-space.com/htmlbook/images.php',function(data){
       for(var i=0; i<data.length;i++){
         $('<div class="collage"></div>')
           .append('<img src="' + data[i].path + '">')
@@ -28,10 +30,11 @@
 
       }
     });
+    */
 
 
     // JSON
-    /*
+    
     var images = [
     {
       "path" : "img/img01.jpg",
@@ -67,7 +70,7 @@
 
     document.getElementById('img_unit').appendChild(div);
   }
-  */
+  
 
   // ajax
   /*
