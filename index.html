@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>collage art</title>
+</head>
+<body>
+  <header>
+    <h1>#blue</h1>
+  </header>
+
+  <div class = "container">
+    <div id = "img_unit">
+    </div>
+  </div>
+
+  <script src="jquery.min.js"></script>
+  <script>
+    $.getJSON('https://rys510.github.io/collage/images.php',function(data){
+      for(var i=0; i<data.length;i++){
+        $('<div class="collage"></div>')
+          .append('<img src="' + data[i].path + '">')
+          .appendTo('#img_unit');
+
+      }
+    });
+
+
+    // JSON
+    /*
+    var images = [
+    {
+      "path" : "img/img01.jpg",
+      "name" : "name01",
+    },
+    {
+      "path" : "img/img02.jpg",
+      "name" : "name02",
+    },
+    {
+      "path" : "img/img03.jpg",
+      "name" : "name03",
+    },
+    {
+      "path" : "img/img04.jpg",
+      "name" : "name04",
+    },
+    {
+      "path" : "img/img05.jpg",
+      "name" : "name05",
+    },
+
+  ];
+  
+  var img;
+  for(var i = 0; i<images.length;i++){
+    img = document.createElement('img');
+    img.setAttribute('src',images[i].path);
+
+    div = document.createElement('div');
+    div.className='collage';
+    div.appendChild(img);
+
+    document.getElementById('img_unit').appendChild(div);
+  }
+  */
+
+  // ajax
+  /*
+  var ajax = new XMLHttpRequest();
+  ajax.open('GET', 'https://h2o-space.com/htmlbook/images.php')
+  ajax.responseType = 'json' ;
+  ajax.send(null);
+
+  ajax.onreadystatechange = function(){
+    if (ajax.readyState === XMLHttpRequest.DONE && ajax.status === 200){
+      for (var i=0; i<this.response.length; i++){
+        var data = this.response[i];
+
+        var img = document.createElement('img');
+        img.setAttribute('src',data.path);
+
+        var div = document.createElement('div');
+        div.className = 'collage';
+        div.appendChild(img);
+
+        document.getElementById('img_unit').appendChild(div);
+      }
+    }
+  }
+  */
+
+  
+
+
+  </script>
+
+</body>
+</html>
