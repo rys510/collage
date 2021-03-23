@@ -13,28 +13,11 @@
     <h1>#blue</h1>
   </header>
 
+  <div id = "img_unit">
+  </div>
   
-      <div id = "img_unit">
-      </div>
-  
-
-  <!-- <script src="jquery.min.js"></script> -->
   <script>
-    // jQuery
-    /*
-    $.getJSON('https://h2o-space.com/htmlbook/images.php',function(data){
-      for(var i=0; i<data.length;i++){
-        $('<div class="collage"></div>')
-          .append('<img src="' + data[i].path + '">')
-          .appendTo('#img_unit');
-
-      }
-    });
-    */
-
-
     // JSON
-    
     var images = [
     {
       "path" : "img/img01.jpg",
@@ -70,36 +53,7 @@
 
     document.getElementById('img_unit').appendChild(div);
   }
-  
-
-  // ajax
-  /*
-  var ajax = new XMLHttpRequest();
-  ajax.open('GET', 'https://h2o-space.com/htmlbook/images.php')
-  ajax.responseType = 'json' ;
-  ajax.send(null);
-
-  ajax.onreadystatechange = function(){
-    if (ajax.readyState === XMLHttpRequest.DONE && ajax.status === 200){
-      for (var i=0; i<this.response.length; i++){
-        var data = this.response[i];
-
-        var img = document.createElement('img');
-        img.setAttribute('src',data.path);
-
-        var div = document.createElement('div');
-        div.className = 'collage';
-        div.appendChild(img);
-
-        document.getElementById('img_unit').appendChild(div);
-      }
-    }
-  }
-  */
-
-  
-
-
+ 
   </script>
 
 </body>
