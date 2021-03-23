@@ -1,2 +1,5 @@
 # collage
-html/css/javascript(jQuery) 練習用　コラージュアート掲載サイト
+html/css/javascript(json) 練習用　自作コラージュ掲載サイト
+
+scroll-snap実装
+
